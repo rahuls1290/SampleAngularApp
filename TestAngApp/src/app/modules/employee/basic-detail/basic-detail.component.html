@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-8 order-md-1 pt-2">
+            <h4 class="mb-3">Employee Details</h4>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="input-group">
+                        <input [(ngModel)]="staffId" type="number" class="form-control" placeholder="Employee Id">
+                        <div class="input-group-append">
+                            <button (click)="getStaffById()" class="btn btn-secondary">Get Staff</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <button (click)="getAllStaff()" class="btn btn-secondary">Get All Employee's</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div *ngIf="staffList && staffList.length > 0; else noRecord" class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Search Results</h6>
+        <div *ngFor="let item of staffList" class="media text-muted pt-3">
+            <img class="profile-img" src="assets/images/staff_profile.png">
+            <p class="ml-3 media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">{{item.Name}}</strong>
+                {{item.Address}}<br>
+                {{item.Department}}
+            </p>
+        </div>
+    </div>
+    <ng-template #noRecord>
+        <div class="my-3 p-3 bg-white rounded shadow-sm">
+            <h6 class="border-bottom border-gray pb-2 mb-0">No Records Found/ Please refresh your search</h6>
+        </div>
+    </ng-template>
+
+</div>

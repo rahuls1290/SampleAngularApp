@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #333;
+	background-color: #f3f5f7;
+	overflow: scroll-y;
+    overflow-x: hidden;
+}
+
+body {
+	-ms-flex-align: center;
+	align-items: center;
+	padding-top: 0px;
+	padding-bottom: 40px;
+}
+
+#app-container {
+	margin: 0;
+	padding: 0;
+	background-color: #f1f5f9 !important;
+}
+
+.app-header {
+	position: relative;
+	padding: 15px 50px 15px 40px;
+	font-size: 13px;
+	line-height: 1.3;
+	color: #fff;	
+	z-index: 1;
+	height: 56px;
+}
+
+.app-footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #212529;
+	color: white;
+	text-align: center;
+	font-size: .7em;
+	padding: 10px;
+	height: 30px;
+}
